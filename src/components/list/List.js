@@ -31,9 +31,9 @@ class List extends React.Component {
     this.setState({ showPopup: !this.state.showPopup });
   }
 
-  popupHandler() {
+  popupHandler(index) {
     this.setState({
-      user: this.state.user,
+      user: this.state.users[index],
       showPopup: true,
     });
   }
@@ -63,10 +63,9 @@ class List extends React.Component {
               <tr key={index}>
                 <td>
                   <img
-                    key={index}
                     src={user.picture.medium}
                     alt="user"
-                    onClick={() => this.popupHandler()}
+                    onClick={() => this.popupHandler(index)}
                   />
                 </td>
                 <td>{user.name.title}</td>
