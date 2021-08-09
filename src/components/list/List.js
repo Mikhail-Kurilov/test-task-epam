@@ -1,5 +1,6 @@
 import React from "react";
 import Popup from "../popupWindow/Popup";
+import "./list.css";
 
 class List extends React.Component {
   constructor(props) {
@@ -40,41 +41,51 @@ class List extends React.Component {
 
   render() {
     return (
-      <div>
-        {this.state.showPopup ? (
-          <Popup user={this.state.user} closePopup={() => this.closePopup()} />
-        ) : (
-          <div></div>
-        )}
-        <table>
-          <tbody>
-            <tr>
-              <td>Photo</td>
-              <td>Title</td>
-              <td>First Name</td>
-              <td>
-                Last Name
-                <button type="button" onClick={() => this.sortList()}>
-                  Sort
-                </button>
-              </td>
-            </tr>
-            {this.state.users.map((user, index) => (
-              <tr key={index}>
-                <td>
-                  <img
-                    src={user.picture.medium}
-                    alt="user"
-                    onClick={() => this.popupHandler(index)}
-                  />
+      <div className="list">
+        <div className="listWrapper">
+          {this.state.showPopup ? (
+            <Popup
+              user={this.state.user}
+              closePopup={() => this.closePopup()}
+            />
+          ) : (
+            <div></div>
+          )}
+          <table className="table">
+            <tbody className="tableWrapper">
+              <tr className="tableHead">
+                <td className="tableHeadTitle">Photo</td>
+                <td className="tableHeadTitle">Title</td>
+                <td className="tableHeadTitle">First Name</td>
+                <td className="tableHeadTitle">
+                  Last Name
+                  <button
+                    className="sortButton"
+                    type="button"
+                    onClick={() => this.sortList()}
+                  >
+                    Sort
+                  </button>
                 </td>
-                <td>{user.name.title}</td>
-                <td>{user.name.first}</td>
-                <td>{user.name.last}</td>
               </tr>
-            ))}
-          </tbody>
-        </table>
+              {this.state.users.map((user, index) => (
+                <tr className="innerTable" key={index}>
+                  <td className="listCell">
+                    <img
+                      className="userPictureMedium"
+                      src={user.picture.medium}
+                      alt="user"
+                      onClick={() => this.popupHandler(index)}
+                    />
+                  </td>
+                  <td className="listCell">{user.name.title}</td>
+                  <td className="listCell">{user.name.first}</td>
+                  <td className="listCell">{user.name.last}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
     );
   }

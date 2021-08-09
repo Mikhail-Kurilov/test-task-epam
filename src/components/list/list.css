@@ -1,0 +1,91 @@
+.list {
+  display: flex;
+  width: 120rem;
+  margin: 0 auto;
+  flex: 1;
+  width: 100%;
+  background-color: #e184f3;
+  justify-content: center;
+}
+
+.table {
+  display: flex;
+  color: white;
+  background-color: #c223de;
+  margin: 0 auto;
+}
+
+.tableWrapper {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+}
+
+.tableHead {
+  display: flex;
+  width: 100%;
+}
+
+.tableHeadTitle {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  font-size: 2rem;
+  font-weight: 500;
+  /*border: black solid 2px; */
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  width: 25rem;
+}
+
+.innerTable {
+  display: flex;
+  width: 100%;
+}
+
+.userPictureMedium {
+  cursor: pointer;
+}
+
+.listCell {
+  font-size: 1.8rem;
+  display: flex;
+  margin-top: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  font-weight: 400;
+  /*border: black solid 2px; */
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem;
+  width: 25rem;
+}
+
+.sortButton {
+  margin-left: 2rem;
+  box-shadow: inset 0px 1px 0px 0px #e184f3;
+  background: linear-gradient(to bottom, #c123de 5%, #a20dbd 100%);
+  background-color: #c123de;
+  border-radius: 6px;
+  border: 1px solid #a511c0;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 4px 12px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #9b14b3;
+}
+.sortButton :hover {
+  background: linear-gradient(to bottom, #a20dbd 5%, #c123de 100%);
+  background-color: #a20dbd;
+}
+.sortButton :active {
+  position: relative;
+  top: 1px;
+}

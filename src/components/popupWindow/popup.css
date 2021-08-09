@@ -1,0 +1,47 @@
+.popupWrapper {
+  width: 100%;
+}
+
+.closePopupOuter {
+  background: #333333;
+  opacity: 0.6;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  position: absolute;
+  width: 108rem;
+}
+
+.popupForm {
+  width: 35rem;
+  height: 45rem;
+  border-radius: 0.8rem;
+  position: absolute;
+  margin-top: 15rem;
+  margin-left: 36.5rem;
+  background: white;
+  text-align: center;
+  z-index: 10;
+}
+
+.popupFormWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.closePopupButton {
+  width: 2.5rem;
+  height: 2.5rem;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: 1rem;
+  margin-top: 1rem;
+  text-align: center;
+  background-color: violet;
+  border-radius: 0.5rem;
+}
+
+.popupElement {
+  margin-top: 2rem;
+  font-size: 1.8rem;
+}
